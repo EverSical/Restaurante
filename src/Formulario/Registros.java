@@ -37,14 +37,12 @@ CallableStatement ps;
         jLabel17 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         IDC = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         N = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         A = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        NIT = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         CORREO = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -81,7 +79,6 @@ CallableStatement ps;
         txtmesa = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
         Jmenu = new javax.swing.JTable();
-        jLabel16 = new javax.swing.JLabel();
         btn_ingresa4 = new javax.swing.JButton();
 
         jLabel11.setText("jLabel11");
@@ -89,8 +86,6 @@ CallableStatement ps;
         jLabel17.setText("jLabel17");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jLabel1.setText("ID CLIENTE");
 
         jLabel2.setText("Nombre");
 
@@ -103,12 +98,6 @@ CallableStatement ps;
         jLabel3.setText("Apellido");
 
         jLabel4.setText("NIT");
-
-        NIT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NITActionPerformed(evt);
-            }
-        });
 
         jLabel5.setText("Correo");
 
@@ -156,12 +145,11 @@ CallableStatement ps;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4))
+                .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btn_ingresar)
@@ -170,7 +158,6 @@ CallableStatement ps;
                     .addComponent(IDC)
                     .addComponent(N)
                     .addComponent(A)
-                    .addComponent(NIT)
                     .addComponent(CORREO, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,12 +167,12 @@ CallableStatement ps;
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(IDC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(IDC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
@@ -196,17 +183,13 @@ CallableStatement ps;
                             .addComponent(A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(NIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(CORREO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(CORREO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_ingresar)
                     .addComponent(btn_modificar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("CLIENTES", jPanel1);
@@ -307,7 +290,7 @@ CallableStatement ps;
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_insertar1)
                     .addComponent(btn_modificar2))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("EMPLEADOS", jPanel2);
@@ -419,7 +402,7 @@ CallableStatement ps;
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bnt_insertar3)
                     .addComponent(btn_mod3))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
@@ -449,9 +432,6 @@ CallableStatement ps;
         ));
         jScrollPane4.setViewportView(Jmenu);
 
-        jLabel16.setFont(new java.awt.Font("Yu Gothic UI", 2, 36)); // NOI18N
-        jLabel16.setText("RESTAURANTE NACIONAL");
-
         btn_ingresa4.setText("Ingresar");
         btn_ingresa4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -473,11 +453,9 @@ CallableStatement ps;
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(btn_ingresa4)
                         .addGap(36, 36, 36)))
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(408, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,11 +467,9 @@ CallableStatement ps;
                 .addGap(18, 18, 18)
                 .addComponent(btn_ingresa4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 22, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane1.addTab("MESAS", jPanel4);
@@ -529,10 +505,6 @@ CallableStatement ps;
     Tablas p= new Tablas();
     Jmenu.setModel(p.mostar4());
     }
-    private void NITActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NITActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NITActionPerformed
-
     private void NActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NActionPerformed
@@ -542,12 +514,11 @@ CallableStatement ps;
        Conexion cn = new Conexion();
        Connection conn= cn.getConection();
          int id= Integer.parseInt(IDC.getText());
-            ps= (CallableStatement) conn.prepareCall("{Call INGRESAR (?,?,?,?,?)}");
+            ps= (CallableStatement) conn.prepareCall("{Call INGRESAR (?,?,?,?)}");
             ps.setInt(1, id);
             ps.setString(2, N.getText());
             ps.setString(3, A.getText());
-            ps.setString(4, NIT.getText());
-            ps.setString(5, CORREO.getText());
+            ps.setString(4, CORREO.getText());
 
             ps.execute();
             JOptionPane.showMessageDialog(null, "Dato ingresado");
@@ -555,7 +526,6 @@ CallableStatement ps;
             IDC.setText("");
             N.setText("");
             A.setText("");
-            NIT.setText("");
             CORREO.setText("");
             cn.CerrarConection();
         }catch(Exception e){
@@ -570,12 +540,11 @@ CallableStatement ps;
         Conexion cn = new Conexion();
         Connection conn= cn.getConection();
         int id= Integer.parseInt(IDC.getText());
-        ps=conn.prepareCall("{Call MODIFICAR (?,?,?,?,?)}");
+        ps=conn.prepareCall("{Call MODIFICAR (?,?,?,?)}");
         ps.setString(1, N.getText());
         ps.setString(2, A.getText());
-        ps.setString(3, NIT.getText());
-        ps.setString(4,CORREO.getText());
-        ps.setInt(5, id);
+        ps.setString(3,CORREO.getText());
+        ps.setInt(4, id);
         int res = ps.executeUpdate();
         
         
@@ -735,8 +704,7 @@ int select =J1.getSelectedRow();
 IDC.setText((String)J1.getValueAt(select, 0));
 N.setText((String)J1.getValueAt(select, 1));
 A.setText((String)J1.getValueAt(select, 2));
-NIT.setText((String)J1.getValueAt(select, 3));
-CORREO.setText((String)J1.getValueAt(select, 4));
+CORREO.setText((String)J1.getValueAt(select, 3));
 }
 
 public void seleccionar3(){
@@ -793,7 +761,6 @@ txtdpi.setText((String)Jtableempleados.getValueAt(select, 3));
     private javax.swing.JTable Jtablamenu;
     private javax.swing.JTable Jtableempleados;
     private javax.swing.JTextField N;
-    private javax.swing.JTextField NIT;
     private javax.swing.JButton bnt_insertar3;
     private javax.swing.JButton btn_ingresa4;
     private javax.swing.JButton btn_ingresar;
@@ -801,14 +768,12 @@ txtdpi.setText((String)Jtableempleados.getValueAt(select, 3));
     private javax.swing.JButton btn_mod3;
     private javax.swing.JButton btn_modificar;
     private javax.swing.JButton btn_modificar2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

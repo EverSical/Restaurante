@@ -221,6 +221,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField txtpass;
-    private javax.swing.JTextField txtuser;
+    public javax.swing.JTextField txtuser;
     // End of variables declaration//GEN-END:variables
 }

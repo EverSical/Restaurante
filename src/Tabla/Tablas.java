@@ -12,17 +12,16 @@ public class Tablas extends Conexion{
 
 public DefaultTableModel mostar(){
         DefaultTableModel modelo = new DefaultTableModel();
-        modelo.addColumn("ID_CLINETE");
+        modelo.addColumn("NIT");
         modelo.addColumn("NOMBRE");
         modelo.addColumn("APELLIDO");
-        modelo.addColumn("NIT");
         modelo.addColumn("CORREO");
         try {
         CallableStatement cmd = getConection().prepareCall("Call lcl");
         rs = cmd.executeQuery();
         while(rs.next()){
-            Object dato [] = new Object [5];
-            for(int i=0; i<5;i++){
+            Object dato [] = new Object [4];
+            for(int i=0; i<4;i++){
             dato[i]=rs.getString(i+1);
             }
             modelo.addRow(dato);
